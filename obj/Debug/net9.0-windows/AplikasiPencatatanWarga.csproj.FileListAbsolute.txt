@@ -28,3 +28,4 @@ C:\Users\hp\AplikasiPencatatanWarga\obj\Debug\net9.0-windows\refint\AplikasiPenc
 C:\Users\hp\AplikasiPencatatanWarga\obj\Debug\net9.0-windows\AplikasiPencatatanWarga.pdb
 C:\Users\hp\AplikasiPencatatanWarga\obj\Debug\net9.0-windows\AplikasiPencatatanWarga.genruntimeconfig.cache
 C:\Users\hp\AplikasiPencatatanWarga\obj\Debug\net9.0-windows\ref\AplikasiPencatatanWarga.dll
+C:\Users\hp\AplikasiPencatatanWarga\obj\Debug\net9.0-windows\AplikasiPencatatanWarga.sourcelink.json

@@ -125,12 +125,26 @@ namespace AplikasiPencatatanWarga
             btnHapus.Enabled = false;
         }
 
-        private void BtnSimpan_Click(object sender, EventArgs e)
+         private void BtnSimpan_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtNIK.Text) || string.IsNullOrWhiteSpace(txtNamaLengkap.Text))
+             if (string.IsNullOrWhiteSpace(txtNIK.Text) || string.IsNullOrWhiteSpace(txtNamaLengkap.Text))
             {
-                MessageBox.Show("NIK dan Nama wajib diisi.", "Peringatan");
+            MessageBox.Show("NIK dan Nama wajib diisi.", "Peringatan");
+            return;
+            }
+
+        // Validasi NIK hanya angka
+            if (!long.TryParse(txtNIK.Text.Trim(), out _))
+            {
+              MessageBox.Show("NIK hanya boleh berisi angka.", "Peringatan");
                 return;
+            }
+
+    // Validasi Nama hanya huruf dan spasi
+            if (!System.Text.RegularExpressions.Regex.IsMatch(txtNamaLengkap.Text.Trim(), @"^[a-zA-Z\s]+$"))
+            {
+            MessageBox.Show("Nama hanya boleh berisi huruf dan spasi.", "Peringatan");
+            return;
             }
 
             if (txtNIK.Text.Length != 16)
@@ -211,5 +225,6 @@ namespace AplikasiPencatatanWarga
                 e.Handled = true;
             }
         }
+
     }
 }
